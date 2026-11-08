@@ -1,0 +1,37 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root { color-scheme: dark; }
+* { box-sizing: border-box; scroll-behavior: smooth; }
+body {
+  margin: 0;
+  background: #090d18;
+  color: #f8fafc;
+  font-family: Arial, Helvetica, sans-serif;
+}
+::selection { background: rgba(139, 92, 246, .4); color: white; }
+a { text-decoration: none; }
+.container { width: min(1120px, calc(100% - 48px)); margin-inline: auto; }
+.section { padding: 112px 0; }
+.eyebrow { color: #a78bfa; font-size: 12px; font-weight: 700; letter-spacing: .18em; text-transform: uppercase; }
+.section-title { font-size: clamp(32px, 5vw, 52px); letter-spacing: -.045em; line-height: 1.08; margin: 14px 0 18px; }
+.muted { color: #94a3b8; line-height: 1.8; }
+.glow { position: absolute; width: 520px; height: 520px; border-radius: 999px; filter: blur(130px); opacity: .17; pointer-events: none; }
+.gradient-text { background: linear-gradient(100deg, #c4b5fd, #818cf8 55%, #67e8f9); -webkit-background-clip: text; background-clip: text; color: transparent; }
+.card { background: linear-gradient(145deg, rgba(20, 27, 45, .95), rgba(13, 19, 33, .95)); border: 1px solid #263047; border-radius: 20px; }
+.pill { display: inline-flex; border: 1px solid #303a52; background: rgba(20, 27, 45, .75); color: #cbd5e1; border-radius: 999px; padding: 7px 11px; font-size: 12px; }
+.primary-button { display: inline-flex; align-items: center; gap: 9px; padding: 14px 19px; background: #7c3aed; color: white; border-radius: 12px; font-size: 14px; font-weight: 700; transition: .2s; }
+.primary-button:hover { background: #8b5cf6; transform: translateY(-2px); }
+.secondary-button { display: inline-flex; align-items: center; gap: 9px; padding: 13px 19px; border: 1px solid #39445c; color: #e2e8f0; border-radius: 12px; font-size: 14px; transition: .2s; }
+.secondary-button:hover { border-color: #a78bfa; }
+.nav-link { color: #94a3b8; font-size: 13px; transition: color .2s; }
+.nav-link:hover { color: white; }
+.project-art { min-height: 210px; display: flex; align-items: center; justify-content: center; overflow: hidden; position: relative; }
+.project-art::before { content: ""; position: absolute; width: 230px; height: 230px; border-radius: 50%; filter: blur(70px); opacity: .45; }
+.project-art > div { position: relative; z-index: 1; }
+@media (max-width: 640px) {
+  .container { width: min(100% - 36px, 1120px); }
+  .section { padding: 78px 0; }
+  .nav-links { display: none; }
+}
